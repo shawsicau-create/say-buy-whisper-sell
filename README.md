@@ -16,7 +16,26 @@
 | `B1_replication_reports_final.md` | 论文附录 B 中所有复现报告的元数据（Markdown 格式） |
 | `replication_reports.bib` | 复现报告的参考文献条目（BibTeX 格式），可直接用于 LaTeX 或文献管理工具 |
 | `analysis/B16_package.zip` | 论文附录 B.16 对应的分析数据与代码包 |
-| `data/` | 论文复现数据包目录（未包含在仓库中，需单独下载） |
+| `data/` | 论文复现数据包目录（原始数据需单独下载，代码和论文已在仓库中） |
+
+## 已收录的复现包：Replication_ReStud
+
+**Boar, C., Gorea, D. & Midrigan, V. (2021). Liquidity Constraints in the U.S. Housing Market.** *Review of Economic Studies*, 88(5), 2379-2428. [DOI: 10.1093/restud/rdab063](https://doi.org/10.1093/restud/rdab063)
+
+本仓库已收录该论文的**完整复现代码**和**论文原文**（`data/Replication_ReStud/`）：
+
+| 目录 | 内容 | 语言 |
+|------|------|------|
+| `data_replication/scf/code/` | 16个Stata .do文件，从SCF数据生成论文表格和图形 | Stata |
+| `data_replication/scf/output/` | 已生成的CSV输出文件 | - |
+| `model_replication/` | 11个模型变体的完整MATLAB代码（基准+稳健性检验） | MATLAB |
+| 论文原文 | `https-:doi.org:10.1093:restud:rdab063.pdf` | - |
+| 中文README | `README_CN.md` 详细的复现操作指南 | - |
+
+**注意**：原始SCF数据文件（.dta，总计约1.1GB）因超过仓库大小限制未包含，可从以下途径获取：
+- 代码中已提供 `proc_data/our_proc/` 下的备用处理后数据（需单独下载）
+- PSID数据需从 [PSID网站](https://psidonline.isr.umich.edu/) 单独获取
+- 完整复现包原始来源：[DOI: 10.3886/E145381V1](https://doi.org/10.3886/E145381V1)
 
 ## 数据包下载（推荐）
 

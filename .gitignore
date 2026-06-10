@@ -18,5 +18,15 @@
 # analysis/B16_package.zip - keep this
 
 # Large data files (CNB 256MB limit)
-# Exclude entire data directory - contains large replication packages
-data/
+# Exclude large raw/processed SCF data files (>200MB each)
+data/Replication_ReStud/data_replication/scf/raw_data/
+data/Replication_ReStud/data_replication/scf/proc_data/
+# Other large replication packages
+data/B.1.48_Local_Elites*/
+data/B147_LiquidityConstraints_Replication.zip
+data/B16_package.zip
+data/B16_package/
+data/B189_BankingCompetition/
+data/download_log.txt
+data/download_replication_packages.py
+data/.venv/
