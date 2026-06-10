@@ -16,3 +16,11 @@
 
 # Analysis package (keep the zip)
 # analysis/B16_package.zip - keep this
+
+# Large data files (CNB 256MB limit)
+data/Replication_ReStud/data_replication/scf/raw_data/p16i6.dta
+data/Replication_ReStud/data_replication/scf/raw_data/p2001i6.dta
+data/Replication_ReStud/data_replication/scf/proc_data/our_proc/taxsim2001.dta
+data/Replication_ReStud/data_replication/scf/proc_data/our_proc/taxsim2016.dta
+data/Replication_ReStud/data_replication/scf/raw_data/rscfp2001.dta
+data/Replication_ReStud/data_replication/scf/raw_data/rscfp2016.dta
