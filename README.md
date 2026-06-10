@@ -16,6 +16,27 @@
 | `B1_replication_reports_final.md` | 论文附录 B 中所有复现报告的元数据（Markdown 格式） |
 | `replication_reports.bib` | 复现报告的参考文献条目（BibTeX 格式），可直接用于 LaTeX 或文献管理工具 |
 | `analysis/B16_package.zip` | 论文附录 B.16 对应的分析数据与代码包 |
+| `data/` | 论文复现数据包目录（未包含在仓库中，需单独下载） |
+
+## 数据包下载（推荐）
+
+`data/` 目录包含以下复现数据包（由于文件较大，未包含在Git仓库中）：
+
+| 包名 | 大小 | 推荐指数 | 说明 |
+|------|------|----------|------|
+| **B147_LiquidityConstraints_Replication.zip** | 84 MB | ⭐⭐⭐⭐⭐ | **强烈推荐** - 流动性约束与住房抵押模型，包含结构模型估计(MATLAB)和SCF数据分析(Stata)，教学价值极高 |
+| B.1.48_Local_Elites_as_State_Capacity... | 1.1 GB | ⭐⭐⭐ | 刚果金地方精英与税收合规性实验，包含完整Stata代码和数据 |
+| B16_package/ | ~50 MB | ⭐⭐⭐ | 已在analysis目录中提供 |
+| B189_BankingCompetition/ | ~100 MB | ⭐⭐⭐ | 银行竞争的断点回归分析 |
+
+**下载方法**：
+```bash
+# 使用项目提供的下载脚本
+cd data/
+python download_replication_packages.py
+```
+
+或从论文原文的[复现包仓库](https://doi.org/10.7910/DVN/DZCQP7)手动下载。
 
 ## 使用说明
 
