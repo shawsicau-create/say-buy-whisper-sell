@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Stata
+*.smcl
+*.log
+~*
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Analysis package (keep the zip)
+# analysis/B16_package.zip - keep this
