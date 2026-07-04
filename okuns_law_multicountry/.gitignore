@@ -8,11 +8,18 @@
 
 # ---- Generated Figures ----
 *.png
+# ---- Web Page Assets (include for deployment) ----
+!okun_multicountry_scatter.png
+!okun_multicountry_gdp_ts.png
+!okun_multicountry_unemp_ts.png
 *.jpg
 *.jpeg
 
 # ---- Generated PDFs ----
 *.pdf
+# ---- Paper PDFs (include for deployment) ----
+!paper_okun_multicountry.pdf
+!paper_okun_multicountry_zh.pdf
 
 # ---- LaTeX Auxiliary Files ----
 *.aux
