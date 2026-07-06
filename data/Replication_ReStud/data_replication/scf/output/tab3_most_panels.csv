@@ -1,0 +1,36 @@
+title,res
+"10 pct liq assets (all) / mean income (all)",-.04
+"25 pct liq assets (all) / mean income (all)",0
+"Median liq assets (all) / mean income (all)",.07
+"75 pct liq assets (all) / mean income (all)",.48
+"90 pct liq assets (all) / mean income (all)",1.5
+"10 pct liq assets (own) / mean income (all)",-.04
+"25 pct liq assets (own) / mean income (all)",.01
+"Median liq assets (own) / mean income (all)",.15
+"75 pct liq assets (own) / mean income (all)",.68
+"90 pct liq assets (own) / mean income (all)",1.69
+"10 pct Wealth (all) / mean income (all)",0
+"25 pct Wealth (all) / mean income (all)",.04
+"Median Wealth (all) / mean income (all)",.73
+"75 pct Wealth (all) / mean income (all)",2.34
+"90 pct Wealth (all) / mean income (all)",3.94
+"10 pct share H n.worth in Wealth (owners)",.36
+"25 pct share H n.worth in Wealth (owners)",.64
+"Median share H n.worth in Wealth (owners)",.87
+"75 pct share H n.worth in Wealth (owners)",.99
+"90 pct share H n.worth in Wealth (owners)",1.04
+"10 pct LTV (own; LTV>0 and <1)",.18
+"25 pct LTV (own; LTV>0 and <1)",.39
+"Median LTV (own; LTV>0 and <1)",.62
+"75 pct LTV (own; LTV>0 and <1)",.77
+"90 pct LTV (own; LTV>0 and <1)",.88
+"10 pct House to income ratio (own)",1.02
+"25 pct House to income ratio (own)",1.62
+"Median House to income ratio (own)",2.48
+"75 pct House to income ratio (own)",3.78
+"90 pct House to income ratio (own)",6.43
+"10 pct Mortgage Age (adj for min age across mortgages)",0
+"25 pct Mortgage Age (adj for min age across mortgages)",1
+"Median Mortgage Age (adj for min age across mortgages)",3
+"75 pct Mortgage Age (adj for min age across mortgages)",6
+"90 pct Mortgage Age (adj for min age across mortgages)",10

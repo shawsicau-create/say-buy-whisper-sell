@@ -1,102 +1,78 @@
-# Say-Buy/Whisper-Sell: 中国A股分析师"言行不一"实证策略
+# 论文复现项目
 
-## 研究背景
+本项目为论文复现教学资源库，供学生参考学习使用。
 
-基于 Hirshleifer, Shi & Wu (2024) 的"说买/私下卖"(Say-Buy/Whisper-Sell) 假说，检验中国A股市场分析师公开推荐与机构实际交易方向背离的现象。
+## 论文来源
 
-## 项目结构
+**Brodeur, A., & Nguyen, M. (2024). Mass Reproducibility and Replicability: A New Hope.**
 
-```
-say-buy-whisper-sell/
-├── scripts/
-│   ├── config.py           # 配置参数
-│   ├── utils.py            # 工具函数
-│   ├── build_panel.py      # 数据面板构建
-│   ├── step1_portfolio.py  # Step 1: 投资组合测试
-│   ├── step2_event.py      # Step 2: 事件研究
-│   ├── step3_quarterly.py  # Step 3: 季度持仓分析
-│   ├── step4_insider.py    # Step 4: 内部人交易
-│   ├── step5_crosssection.py # Step 5: 横截面异质性
-│   └── main.py             # 主运行脚本
-├── data/
-│   ├── raw/                # 原始MCP数据
-│   └── processed/          # 处理后数据
-├── analysis/                # 分析目录
-└── results/                # 结果输出
-```
+- 原文见 `Brodeur-MassReproducibilityReplicability-2024.pdf`
 
-## 数据来源
+## 项目内容
 
-本项目使用以下MCP工具获取数据：
+| 文件 | 说明 |
+|------|------|
+| `Brodeur-MassReproducibilityReplicability-2024.pdf` | 论文原文（PDF） |
+| `B1_replication_reports_final.md` | 论文附录 B 中所有复现报告的元数据（Markdown 格式） |
+| `replication_reports.bib` | 复现报告的参考文献条目（BibTeX 格式），可直接用于 LaTeX 或文献管理工具 |
+| `analysis/B16_package.zip` | 论文附录 B.16 对应的分析数据与代码包 |
+| `data/` | 论文复现数据包目录（原始数据需单独下载，代码和论文已在仓库中） |
 
-| 数据类型 | MCP工具 | 状态 |
-|---------|---------|------|
-| 日线行情 | tushareMcp::daily | ✅ 可用 |
-| 研报评级 | china-stock-mcp::get_stock_research_report | ✅ 可用 |
-| 流通股东 | china-stock-mcp::get_stock_circulate_stock_holder | ✅ 可用 |
-| 股东户数 | tushareMcp::stk_holdernumber | ✅ 可用 |
-| 历史行情 | china-stock-mcp::get_hist_data | ✅ 可用 |
-| 券商金股 | tushareMcp::broker_recommend | ❌ 需付费 |
-| 资金流向 | tushareMcp::moneyflow | ❌ 需付费 |
-| 机构持仓 | tushareMcp::fund_portfolio | ❌ 需付费 |
+## 已收录的复现包：Replication_ReStud
 
-## 五个实证步骤
+**Boar, C., Gorea, D. & Midrigan, V. (2021). Liquidity Constraints in the U.S. Housing Market.** *Review of Economic Studies*, 88(5), 2379-2428. [DOI: 10.1093/restud/rdab063](https://doi.org/10.1093/restud/rdab063)
 
-### Step 1: 核心投资组合检验
-- 构建2x2分组：分析师评级 × 机构持仓变化
-- **Group B (言行不一)**: 高评级 + 机构减持
-- 检验各组未来持有期异常收益
+本仓库已收录该论文的**完整复现代码**和**论文原文**（`data/Replication_ReStud/`）：
 
-### Step 2: 研报评级调整事件研究
-- 以评级调整事件日为基准
-- 计算[-20, +20]窗口的累积异常收益
+| 目录 | 内容 | 语言 |
+|------|------|------|
+| `data_replication/scf/code/` | 16个Stata .do文件，从SCF数据生成论文表格和图形 | Stata |
+| `data_replication/scf/output/` | 已生成的CSV输出文件 | - |
+| `model_replication/` | 11个模型变体的完整MATLAB代码（基准+稳健性检验） | MATLAB |
+| 论文原文 | `https-:doi.org:10.1093:restud:rdab063.pdf` | - |
+| 中文README | `README_CN.md` 详细的复现操作指南 | - |
 
-### Step 3: 季度机构持仓一致性
-- 检验研报评级变化与机构持仓变化的相关性
+**注意**：原始SCF数据文件（.dta，总计约1.1GB）因超过仓库大小限制未包含，可从以下途径获取：
+- 代码中已提供 `proc_data/our_proc/` 下的备用处理后数据（需单独下载）
+- PSID数据需从 [PSID网站](https://psidonline.isr.umich.edu/) 单独获取
+- 完整复现包原始来源：[DOI: 10.3886/E145381V1](https://doi.org/10.3886/E145381V1)
 
-### Step 4: 内部人交易与分析师乐观偏差
-- 使用间接代理变量检验内部人减持时分析师的评级行为
+## 数据包下载（推荐）
 
-### Step 5: 横截面异质性分析
-- 按市场状态、规模、券商声誉分组检验
+`data/` 目录包含以下复现数据包（由于文件较大，未包含在Git仓库中）：
 
-## 使用方法
+| 包名 | 大小 | 推荐指数 | 说明 |
+|------|------|----------|------|
+| **B147_LiquidityConstraints_Replication.zip** | 84 MB | ⭐⭐⭐⭐⭐ | **强烈推荐** - 流动性约束与住房抵押模型，包含结构模型估计(MATLAB)和SCF数据分析(Stata)，教学价值极高 |
+| B.1.48_Local_Elites_as_State_Capacity... | 1.1 GB | ⭐⭐⭐ | 刚果金地方精英与税收合规性实验，包含完整Stata代码和数据 |
+| B16_package/ | ~50 MB | ⭐⭐⭐ | 已在analysis目录中提供 |
+| B189_BankingCompetition/ | ~100 MB | ⭐⭐⭐ | 银行竞争的断点回归分析 |
 
-### 1. 准备数据
-通过MCP工具获取数据并保存为CSV文件到 `data/raw/`:
-- `daily_all.csv` - 日线行情
-- `research_reports.csv` - 研报数据
-- `circulate_holders.csv` - 流通股东数据
-- `holder_number.csv` - 股东户数
-
-### 2. 构建面板
+**下载方法**：
 ```bash
-python scripts/build_panel.py
+# 使用项目提供的下载脚本
+cd data/
+python download_replication_packages.py
 ```
 
-### 3. 运行分析
-```bash
-python scripts/main.py
-```
+或从论文原文的[复现包仓库](https://doi.org/10.7910/DVN/DZCQP7)手动下载。
 
-或单独运行每个步骤:
-```bash
-python scripts/step1_portfolio.py
-python scripts/step2_event.py
-# ...
-```
+## 使用说明
 
-## 数据限制说明
+1. **阅读原文**：先通读 PDF 了解论文的研究背景与复现方法论
+2. **浏览复现报告**：通过 `B1_replication_reports_final.md` 了解 100+ 篇顶级期刊论文的复现报告元数据，包括：
+   - 原始论文标题、发表期刊与 DOI
+   - 复现关键发现与结论
+   - 复现包与原始作者数据包的下载链接
+3. **引用管理**：`replication_reports.bib` 提供了所有复现报告的 BibTeX 条目，可直接导入 Zotero / EndNote 等工具
+4. **动手实践**：参考 `analysis/` 目录中的分析包进行复现练习
 
-由于`moneyflow`（资金流向大单/小单分类）等接口需要Tushare PRO付费权限，本项目使用以下替代方案：
-- 用季度流通股东数据计算机构持仓变化
-- 用股东户数变化作为散户参与代理变量
-- 用日均成交量作为交易活跃度代理
+## 适用场景
 
-这些替代方案保留了研究框架的核心逻辑，但精度有所下降。
+- 研究方法课程的教学案例
+- 学生学习论文复现流程与规范
+- 了解经济学、政治学等领域的研究可复现性现状
 
-## 参考文献
+## 许可声明
 
-- Hirshleifer, D., Shi, Y., & Wu, W. (2024). Do Sell-Side Analysts Say "Buy" While Whispering "Sell"? NBER Working Paper 30032.
-- Hobbs, J., & Singh, A. (2015). Buy-Side vs. Sell-Side Analysts.
-- Busse, J., Green, T., & Jegadeesh, N. (2012). Buy-Side Trades and Sell-Side Recommendations.
+本项目仅用于教学与学术研究目的，论文原文版权归原作者所有。

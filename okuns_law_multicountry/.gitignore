@@ -1,0 +1,67 @@
+# ============================================
+# Okun's Law 跨国复现研究 - .gitignore
+# ============================================
+
+
+# ---- Stata Output ----
+*.log
+
+# ---- Generated Figures ----
+*.png
+# ---- Web Page Assets (include for deployment) ----
+!okun_multicountry_scatter.png
+!okun_multicountry_gdp_ts.png
+!okun_multicountry_unemp_ts.png
+*.jpg
+*.jpeg
+
+# ---- Generated PDFs ----
+*.pdf
+# ---- Paper PDFs (include for deployment) ----
+!paper_okun_multicountry.pdf
+!paper_okun_multicountry_zh.pdf
+
+# ---- LaTeX Auxiliary Files ----
+*.aux
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.brf
+*.lof
+*.lot
+*.toc
+*.run.xml
+*.bcf
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+
+# ---- Virtual Environment ----
+.venv/
+venv/
+env/
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Sensitive Config ----
+api_config.json
+api_test_results.json
+fred_*.png

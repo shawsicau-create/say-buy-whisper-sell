@@ -1,55 +1,32 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-ENV/
-env/
-.venv/
-
-# Data files (keep sample data)
-data/raw/*.csv
-!data/raw/*.sample.csv
-data/processed/*.csv
-
-# Results (keep structure, ignore data)
-results/*.csv
-results/*.txt
-results/*.log
-
-# LaTeX build artifacts
-paper/*.aux
-paper/*.bbl
-paper/*.blg
-paper/*.log
-paper/*.out
-paper/*.pdf
-!paper/*.tex
-
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 ._*
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Stata
+*.smcl
+*.log
+~*
+
+# Temporary files
+*.tmp
+*.bak
 *~
 
-# OS
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# Analysis package (keep the zip)
+# analysis/B16_package.zip - keep this
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Virtual environments
-*.venv
-env/
-ENV/
+# Large data files (CNB 256MB limit)
+# Exclude large raw/processed SCF data files (>200MB each)
+data/Replication_ReStud/data_replication/scf/raw_data/
+data/Replication_ReStud/data_replication/scf/proc_data/
+# Other large replication packages
+data/B.1.48_Local_Elites*/
+data/B147_LiquidityConstraints_Replication.zip
+data/B16_package.zip
+data/B16_package/
+data/B189_BankingCompetition/
+data/download_log.txt
+data/download_replication_packages.py
+data/.venv/
